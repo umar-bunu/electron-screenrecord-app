@@ -1,6 +1,6 @@
 {
-  "name": "electron-screenrecord-app",
-  "productName": "electron-screenrecord-app",
+  "name": "screen-recorder",
+  "productName": "screen-recorder",
   "version": "1.0.0",
   "description": "App For Screen Recording Your Desktop",
   "main": ".vite/build/main.js",
