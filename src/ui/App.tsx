@@ -17,11 +17,9 @@ async function handleStop() {
   const blob = new Blob(recordedChunks, {
     type: videoOptions.mimeType,
   });
-  console.log("yooo");
 
   const buffer = Buffer.from(await blob.arrayBuffer());
-  const res = await ipcRenderer.invoke("popDialog", buffer);
-  console.log("yooo");
+  await ipcRenderer.invoke("popDialog", buffer);
 }
 
 const btnProps: ButtonProps["sx"] = {
@@ -69,7 +67,7 @@ function App() {
       };
 
       const stream = await navigator.mediaDevices.getUserMedia(
-        constraints as any
+        constraints as MediaStreamConstraints
       );
       const videoElement = document.getElementsByTagName("video")[0];
       videoElement.srcObject = stream;
