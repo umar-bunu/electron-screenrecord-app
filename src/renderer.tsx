@@ -26,6 +26,17 @@
  * ```
  */
 
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./ui/App";
 
-console.log('👋 This message is being logged by "renderer.ts", included via Vite');
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+ipcRenderer.on;
+console.log(
+  '👋 This message is being logged by "renderer.ts", included via Vite'
+);
