@@ -4,6 +4,7 @@ import {
   Menu,
   BrowserWindow,
   dialog,
+  Notification,
 } from "electron";
 import { IPCKeys } from "../../src/definitions/electron";
 import { writeFile } from "fs";
@@ -47,7 +48,9 @@ const avilableHandlers: Record<keyof typeof IPCKeys, () => void> = {
         buttonLabel: "Save Video",
         defaultPath: `screenrecorder-${Date.now()}.webm`,
       });
-      writeFile(filePath, buffer, () => alert("Video Saved Successfully"));
+      writeFile(filePath, buffer, () => {
+        console.log("file succesffully saved");
+      });
     });
   },
 };
