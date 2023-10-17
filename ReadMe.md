@@ -24,7 +24,7 @@ This Electron-based screen recording app allows users to capture their screen ac
 
 1. **Download**: To get started, download the app from the following link:
 
-   [Download Screen Recording App](#insert-google-drive-link-here)
+   [Download Screen Recording App](#https://drive.google.com/drive/folders/1Kk1Y1u4Av41qjdsMl1555d1Ehmm2uLV6)
 
 2. **Unzip**: Extract the contents of the downloaded zip file.
 
@@ -63,5 +63,3 @@ We welcome contributions to improve this app. If you'd like to contribute, pleas
 ---
 
 **Enjoy recording your screen with our Electron-based app!**
-
-For the latest updates and news, visit our website at [your-website-url.com](#insert-website-url-here).

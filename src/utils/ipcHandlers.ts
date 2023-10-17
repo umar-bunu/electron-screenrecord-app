@@ -1,13 +1,12 @@
 import {
-  ipcMain,
-  desktopCapturer,
-  Menu,
   BrowserWindow,
+  desktopCapturer,
   dialog,
-  Notification,
+  ipcMain,
+  Menu,
 } from "electron";
-import { IPCKeys } from "../../src/definitions/electron";
 import { writeFile } from "fs";
+import { IPCKeys } from "../../src/definitions/electron";
 const windows: {
   mainWindow: null | BrowserWindow;
 } = { mainWindow: null };
