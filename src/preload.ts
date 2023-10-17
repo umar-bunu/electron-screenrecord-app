@@ -7,13 +7,10 @@ import { IPCKeys } from "./definitions/electron";
 const Electron: Omit<typeof electron, "ipcRenderer"> = {
   screenRecordApi: {
     async getInputSources() {
-      console.log("about to start recording");
       const res = await ipcRenderer.invoke(IPCKeys.getInputSources);
-      console.log("Renderer Process:: Input Sources", res);
       return res;
     },
     async popMenu(param: Electron.DesktopCapturerSource[]) {
-      console.log("Renderer Process::popMenu:: params:  ", param);
       try {
         const res: boolean = await ipcRenderer.invoke(
           IPCKeys.popMenu,
@@ -21,7 +18,7 @@ const Electron: Omit<typeof electron, "ipcRenderer"> = {
         );
         return res;
       } catch (err) {
-        console.log("renderprocess: error: ", err);
+        console.error("renderprocess:: error while pop menu: ", err);
         return err;
       }
     },

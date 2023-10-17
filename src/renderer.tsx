@@ -39,8 +39,3 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     </ThemeProvider>
   </React.StrictMode>
 );
-
-ipcRenderer.on;
-console.log(
-  '👋 This message is being logged by "renderer.ts", included via Vite'
-);

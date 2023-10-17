@@ -17,13 +17,11 @@ const avilableHandlers: Record<keyof typeof IPCKeys, () => void> = {
       const inputSources = await desktopCapturer.getSources({
         types: ["screen", "window"],
       });
-      console.log("main process:: Input sources: ", inputSources);
       return inputSources;
     });
   },
   [IPCKeys.popMenu]: () => {
     ipcMain.handle(IPCKeys.popMenu, async (event, params: string) => {
-      console.log("mainProcess::popup event called: ", { event, params });
       const inputSources: Electron.DesktopCapturerSource[] = JSON.parse(params);
 
       const videoOptionsmenu = Menu.buildFromTemplate(
@@ -31,7 +29,6 @@ const avilableHandlers: Record<keyof typeof IPCKeys, () => void> = {
           label: source.name,
           icon: source.appIcon,
           click: () => {
-            console.log("first");
             windows.mainWindow?.webContents?.send(
               "selected-source",
               JSON.stringify(source)
@@ -40,19 +37,17 @@ const avilableHandlers: Record<keyof typeof IPCKeys, () => void> = {
         }))
       );
       videoOptionsmenu.popup();
-      console.log("mainprocess:: video options popped");
 
       return true;
     });
   },
   [IPCKeys.popDialog]: () => {
     ipcMain.handle(IPCKeys.popDialog, async (_event, buffer: Buffer) => {
-      console.log("mainProcess:popDialog event called: ", {});
       const { filePath } = await dialog.showSaveDialog({
         buttonLabel: "Save Video",
         defaultPath: `screenrecorder-${Date.now()}.webm`,
       });
-      writeFile(filePath, buffer, () => console.log("Video Saved Succesfully"));
+      writeFile(filePath, buffer, () => alert("Video Saved Successfully"));
     });
   },
 };
@@ -67,7 +62,6 @@ export default (
       if (val) {
         {
           avilableHandlers[eachKey]();
-          console.log("mainProcess:: Added Ipc handler for: ", eachKey);
         }
       }
     }

@@ -9,7 +9,6 @@ const videoOptions = {
 };
 
 function handleDataAvailable(e: BlobEvent) {
-  console.log("video data available");
   recordedChunks.push(e.data);
 }
 
@@ -35,7 +34,6 @@ function App() {
     useState<Electron.DesktopCapturerSource>();
   const [isRecording, setisRecording] = useState(false);
   const stopRecording = () => {
-    console.log({ mediaRecorder });
     mediaRecorder?.stop();
     setisRecording(false);
   };

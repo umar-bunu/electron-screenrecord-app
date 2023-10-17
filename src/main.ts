@@ -7,8 +7,6 @@ if (require("electron-squirrel-startup")) {
   app.quit();
 }
 
-const isDev = !app.isPackaged;
-
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -18,7 +16,6 @@ const createWindow = () => {
       preload: path.join(__dirname, "preload.js"),
     },
   });
-  isDev && mainWindow.webContents.openDevTools();
   addHandlers(
     {
       [IPCKeys.getInputSources]: true,
@@ -27,6 +24,7 @@ const createWindow = () => {
     },
     mainWindow
   );
+
   // and load the index.html of the app.
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
     mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
@@ -35,6 +33,7 @@ const createWindow = () => {
       path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`)
     );
   }
+  mainWindow.maximize();
 };
 
 // This method will be called when Electron has finished
