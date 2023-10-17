@@ -1,7 +1,5 @@
 # Screen Recording App with Electron
 
-![App Screenshot](screenshot.png)
-
 ## Description
 
 This Electron-based screen recording app allows users to capture their screen activities with ease. It provides a user-friendly interface and various settings to customize your screen recordings.
@@ -46,7 +44,7 @@ This Electron-based screen recording app allows users to capture their screen ac
 
 ## Support and Issues
 
-If you encounter any issues or have questions about using the app, please [open an issue on GitHub](#insert-github-issue-url-here) to get help.
+If you encounter any issues or have questions about using the app, please [open an issue on GitHub](#https://github.com/umar-bunu/electron-screenrecord-app/issues) to get help.
 
 ## License
 
@@ -54,11 +52,7 @@ This app is licensed under the [MIT License](LICENSE.md).
 
 ## Credits
 
-This app was created by [Your Name].
-
-## Contribute
-
-We welcome contributions to improve this app. If you'd like to contribute, please see our [Contribution Guidelines](CONTRIBUTING.md).
+This app was created by Umar Bunu.
 
 ---
 
