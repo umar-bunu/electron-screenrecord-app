@@ -22,7 +22,7 @@ This Electron-based screen recording app allows users to capture their screen ac
 
 1. **Download**: To get started, download the app from the following link:
 
-   [Download Screen Recording App](#https://drive.google.com/drive/folders/1Kk1Y1u4Av41qjdsMl1555d1Ehmm2uLV6)
+   [Download Screen Recording App](https://drive.google.com/drive/folders/1Kk1Y1u4Av41qjdsMl1555d1Ehmm2uLV6)
 
 2. **Unzip**: Extract the contents of the downloaded zip file.
 
@@ -44,7 +44,7 @@ This Electron-based screen recording app allows users to capture their screen ac
 
 ## Support and Issues
 
-If you encounter any issues or have questions about using the app, please [open an issue on GitHub](#https://github.com/umar-bunu/electron-screenrecord-app/issues) to get help.
+If you encounter any issues or have questions about using the app, please [open an issue on GitHub](https://github.com/umar-bunu/electron-screenrecord-app/issues) to get help.
 
 ## License
 
